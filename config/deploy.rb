@@ -1,4 +1,4 @@
-lock '3.1.0'
+lock '3.3.5'
 set :application, 'depot'
 set :use_sudo, true
 set :repo_url, 'git@github.com:Shruti2791/depot.git'
@@ -18,9 +18,6 @@ namespace :deploy do
 
   desc 'Restart application'
   task :restart do
-    # on roles(:app), in: :sequence, wait: 5 do
-    #   execute :touch, release_path.join('tmp/restart.txt')
-    # end
     on roles(:web), in: :parallel do
       within current_path do
         with rails_env: fetch(:rails_env) do
@@ -30,12 +27,6 @@ namespace :deploy do
       end
     end
   end
-
-  # task :updated do
-  #   on roles(:app), in: :sequence, wait: 5 do
-  #     execute :touch, release_path.join('tmp/restart.txt')
-  #   end
-  # end
 
   after :finishing, 'deploy:cleanup'
   after :publishing, 'deploy:restart'

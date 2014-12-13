@@ -2,7 +2,7 @@ app_folder_name = 'MetalDemo'
 shared_path = "/var/www/apps/#{ app_folder_name }/shared"
 
 worker_processes 4
-user 'shruti'
+user 'shruti2'
 working_directory "/var/www/apps/#{ app_folder_name }/current"
 preload_app true
 timeout 60
