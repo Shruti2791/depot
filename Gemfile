@@ -37,6 +37,7 @@ gem 'unicorn'
 # Use Capistrano for deployment
 gem 'capistrano'
 gem 'capistrano-bundler'
+gem 'capistrano-rails'
 
 gem 'byebug'
 # gem 'debugger', group: [:development, :test]
