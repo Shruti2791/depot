@@ -1,4 +1,4 @@
-app_folder_name = 'MetalDemo'
+app_folder_name = 'depot'
 shared_path = "/var/www/apps/#{ app_folder_name }/shared"
 
 worker_processes 4
